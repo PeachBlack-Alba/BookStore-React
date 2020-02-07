@@ -1,18 +1,39 @@
-import React, { Component } from "react";
+// import React, { Component } from "react";
+// import Button from "react-bootstrap/Button";
+// import Form from "react-bootstrap/Form";
 
-export class Searcher extends Component {
-  render() {
-    return (
-      <div class="topnav">
-        <input
-          type="text"
-          id="searchbar"
-          onkeyup="filter()"
-          placeholder="Busca tu libro..."
-        />
-      </div>
-    );
-  }
-}
+// class Searcher extends React.Component {
+//   state = {
+//     input: "",
+//     Books: [],
+//     filteredSearch: []
 
-export default Searcher;
+//   };
+
+//   search = search => {
+
+//  }
+
+//   render() {
+//     const books = this.props.booksData;
+//   };
+//   return(
+//     { books.map((book, title) => {
+//           <Form inline>
+//             <Form.Control
+//               type="text"
+//               placeholder="Busca tu libro"
+//               className="mr-sm-2"
+//               value={this.state.input}
+//             />
+//             <Button Button variant="outline-dark" onClick={() => this.search(input)}>
+//               Buscar
+//         </Button>
+//           </Form>
+//         );
+//       });
+
+//     }
+//   }
+
+// export default Searcher;

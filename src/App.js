@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Books from "./components/Books";
 import Header from "./components/Header";
-import Searcher from "./components/Searcher";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
@@ -33,8 +32,8 @@ export class App extends Component {
     return (
       <div>
         <Header></Header>
-        <Searcher></Searcher>
-        <Books booksData={this.state.books} text="hi alba"></Books>
+
+        <Books booksData={this.state.books}></Books>
       </div>
     );
   }

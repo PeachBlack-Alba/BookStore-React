@@ -3,10 +3,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Row from "react-bootstrap/Row";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
-import { render } from "@testing-library/react";
+import Form from "react-bootstrap/Form";
+
 class Books extends React.Component {
   state = {
-    show: false
+    show: false,
+    input: "",
+    filteredBooks: []
   };
 
   handleShow = index => {
@@ -17,6 +20,9 @@ class Books extends React.Component {
       }
     });
   };
+  search = () => {
+    console.log("search");
+  };
   render() {
     console.log(this.props);
     const books = this.props.booksData;
@@ -26,6 +32,17 @@ class Books extends React.Component {
     };
     return (
       <div>
+        <Form inline>
+          <Form.Control
+            type="text"
+            placeholder="Busca tu libro"
+            className="mr-sm-2"
+            value={this.state.input}
+          />
+          <Button Button variant="outline-dark" onChange={() => this.search()}>
+            Buscar
+          </Button>
+        </Form>
         <Row className="justify-content-md-center">
           {books.map((book, index) => {
             return (
@@ -54,14 +71,6 @@ class Books extends React.Component {
                         </Button>
                       </Modal.Footer>
                     </Modal>
-                    {/* <button
-                    className="button"
-                    type="button"
-                    onClick={createGallery}
-                    id={book.id}
-                  >
-                    More Info
-                  </button> */}
                   </div>
                 </div>
               </div>
