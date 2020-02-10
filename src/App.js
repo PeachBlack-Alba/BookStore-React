@@ -4,6 +4,7 @@ import Header from "./components/Header";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./App.css";
+import FilteredBooks from "./components/FilteredBooks";
 
 export class App extends Component {
   state = {
