@@ -10,7 +10,6 @@ class Books extends React.Component {
   state = {
     show: false,
     input: ""
-    // filteredBooks: []
   };
 
   handleShow = index => {
@@ -21,27 +20,6 @@ class Books extends React.Component {
       }
     });
   };
-  // search = event => {
-  //   const books = this.props.booksData;
-  //   //this.setState({ input: event.target.value });
-  //   console.log(this.state.input);
-  //   const filtered = books.filter(oneBook => {
-  //     return oneBook.titulo
-  //       .toLowerCase()
-  //       .includes(this.state.input.toLowerCase());
-  //   });
-
-  //   // const filtered = [];
-  //   // for (let i = 0; i < books.length; i++) {
-  //   //   if (
-  //   //     books[i].titulo.toLowerCase().includes(this.state.input.toLowerCase())
-  //   //   ) {
-  //   //     filtered.push(books[i]);
-  //   //   }
-  //   // }
-  //   console.log("filtered", filtered);
-  //   this.setState({ filteredBooks: filtered });
-  // };
 
   render() {
     const books = this.props.booksData;
